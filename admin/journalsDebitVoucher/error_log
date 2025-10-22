@@ -1,0 +1,48 @@
+[27-Nov-2023 13:03:35 Asia/Manila] PHP Warning:  Undefined variable $data in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/imed_pdf.php on line 64
+[27-Nov-2023 13:03:49 Asia/Manila] PHP Warning:  Undefined variable $bank_balance in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/cb_nondli_pdf.php on line 321
+[27-Nov-2023 13:03:49 Asia/Manila] PHP Warning:  Undefined variable $cash_balance in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/cb_nondli_pdf.php on line 325
+[27-Nov-2023 13:04:30 Asia/Manila] PHP Warning:  Undefined variable $data in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/imed_pdf.php on line 64
+[27-Nov-2023 13:14:25 Asia/Manila] PHP Warning:  Undefined variable $dli_type in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/manage_journal.php on line 93
+[27-Nov-2023 13:14:25 Asia/Manila] PHP Warning:  Undefined variable $dli_type in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/manage_journal.php on line 97
+[27-Nov-2023 13:14:25 Asia/Manila] PHP Warning:  Undefined variable $component_number in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/manage_journal.php on line 113
+[27-Nov-2023 13:14:25 Asia/Manila] PHP Warning:  Undefined variable $component_number in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/manage_journal.php on line 113
+[27-Nov-2023 13:14:25 Asia/Manila] PHP Warning:  Undefined variable $component_number in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/manage_journal.php on line 113
+[27-Nov-2023 13:26:55 Asia/Manila] PHP Warning:  Undefined variable $dli_type in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/manage_journal.php on line 93
+[27-Nov-2023 13:26:55 Asia/Manila] PHP Warning:  Undefined variable $dli_type in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/manage_journal.php on line 97
+[27-Nov-2023 13:26:55 Asia/Manila] PHP Warning:  Undefined variable $component_number in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/manage_journal.php on line 113
+[27-Nov-2023 13:26:55 Asia/Manila] PHP Warning:  Undefined variable $component_number in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/manage_journal.php on line 113
+[27-Nov-2023 13:26:55 Asia/Manila] PHP Warning:  Undefined variable $component_number in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/manage_journal.php on line 113
+[27-Nov-2023 13:35:15 Asia/Manila] PHP Warning:  Undefined variable $dli_type in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/manage_journal.php on line 93
+[27-Nov-2023 13:35:15 Asia/Manila] PHP Warning:  Undefined variable $dli_type in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/manage_journal.php on line 97
+[27-Nov-2023 13:35:15 Asia/Manila] PHP Warning:  Undefined variable $component_number in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/manage_journal.php on line 113
+[27-Nov-2023 13:35:15 Asia/Manila] PHP Warning:  Undefined variable $component_number in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/manage_journal.php on line 113
+[27-Nov-2023 13:35:15 Asia/Manila] PHP Warning:  Undefined variable $component_number in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/manage_journal.php on line 113
+[27-Nov-2023 13:44:20 Asia/Manila] PHP Warning:  Undefined variable $data in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/imed_pdf.php on line 64
+[27-Nov-2023 13:51:59 Asia/Manila] PHP Warning:  Undefined variable $data in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/imed_pdf.php on line 64
+[27-Nov-2023 14:53:07 Asia/Manila] PHP Warning:  Undefined variable $data in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/imed_pdf.php on line 64
+[27-Nov-2023 14:54:15 Asia/Manila] PHP Warning:  Undefined variable $data in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/imed_pdf.php on line 64
+[27-Nov-2023 14:58:38 Asia/Manila] PHP Warning:  Undefined variable $data in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/imed_pdf.php on line 64
+[27-Nov-2023 15:14:58 Asia/Manila] PHP Warning:  Undefined variable $data in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/imed_pdf.php on line 64
+[27-Nov-2023 16:42:44 Asia/Manila] PHP Warning:  Undefined variable $data in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/imed_pdf.php on line 64
+[27-Nov-2023 16:42:44 Asia/Manila] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/imed_pdf.php:358
+Stack trace:
+#0 {main}
+  thrown in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/imed_pdf.php on line 358
+[27-Nov-2023 02:57:15 America/Chicago] PHP Parse error:  syntax error, unexpected token "else" in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/imed_pdf.php on line 362
+[27-Nov-2023 02:57:21 America/Chicago] PHP Parse error:  syntax error, unexpected token "else" in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/imed_pdf.php on line 362
+[27-Nov-2023 16:59:07 Asia/Manila] PHP Warning:  Undefined variable $data in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/imed_pdf.php on line 64
+[28-Dec-2023 11:54:42 Asia/Manila] PHP Warning:  Undefined array key "categoryname" in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/e1_pdf.php on line 187
+[28-Dec-2023 11:54:42 Asia/Manila] PHP Warning:  Undefined array key "categoryname" in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/e1_pdf.php on line 187
+[28-Dec-2023 11:54:42 Asia/Manila] PHP Warning:  Undefined array key "categoryname" in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/e1_pdf.php on line 187
+[30-Dec-2023 03:17:39 Asia/Manila] PHP Warning:  Undefined array key "categoryname" in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/e1_pdf.php on line 187
+[30-Dec-2023 03:17:39 Asia/Manila] PHP Warning:  Undefined array key "categoryname" in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/e1_pdf.php on line 187
+[30-Dec-2023 03:17:39 Asia/Manila] PHP Warning:  Undefined array key "categoryname" in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/e1_pdf.php on line 187
+[01-Jan-2024 17:49:36 Asia/Manila] PHP Warning:  Undefined variable $bank_balance in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/cb_nondli_pdf.php on line 321
+[01-Jan-2024 17:49:36 Asia/Manila] PHP Warning:  Undefined variable $cash_balance in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/cb_nondli_pdf.php on line 325
+[01-Jan-2024 23:10:06 Asia/Manila] PHP Warning:  Undefined variable $bank_balance in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/cb_nondli_pdf.php on line 322
+[01-Jan-2024 23:10:06 Asia/Manila] PHP Warning:  Undefined variable $cash_balance in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/cb_nondli_pdf.php on line 326
+[02-Jan-2024 13:39:48 Asia/Manila] PHP Warning:  Undefined variable $bank_balance in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/cb_nondli_pdf.php on line 322
+[02-Jan-2024 13:39:48 Asia/Manila] PHP Warning:  Undefined variable $cash_balance in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/cb_nondli_pdf.php on line 326
+[02-Jan-2024 14:42:36 Asia/Manila] PHP Warning:  Undefined variable $bankcashbal in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/tb_pdf.php on line 194
+[04-Jan-2024 15:14:32 Asia/Manila] PHP Warning:  Undefined array key "contract_value" in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/b2_pdf.php on line 160
+[05-Jan-2024 11:06:23 Asia/Manila] PHP Warning:  Attempt to read property "num_rows" on bool in /home4/bangagar/public_html/fms/admin/journalsDebitVoucher/b2_pdf.php on line 128

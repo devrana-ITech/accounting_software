@@ -1,0 +1,1 @@
+[10-Sep-2023 11:26:11 Asia/Manila] PHP Warning:  Attempt to read property "num_rows" on bool in /home4/bangagar/public_html/fms/classes/Master.php on line 90
