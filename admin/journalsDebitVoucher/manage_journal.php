@@ -13,15 +13,51 @@ if(isset($_GET['id'])){
     }
 }
 
-$val = $_settings->userdata('year_id');
-$qry_year = $conn->query("SELECT max(voucher_number) as vn FROM `journal_entries` where year_id = '$val' and journal_type = 'dv'");
+
+
+$val = $_settings->userdata('year_id'); // বর্তমান বছর
+$journal_type = 'dv';
+
+// Step 1: সর্বশেষ main voucher number বের করা (integer অংশ)
+$qry_year = $conn->query("
+    SELECT MAX(FLOOR(voucher_number)) AS main_vn
+    FROM journal_entries
+    WHERE year_id = '$val'
+    AND journal_type = '$journal_type'
+");
+
 if($qry_year->num_rows > 0){
-        $res1 = $qry_year->fetch_array();
-        foreach($res1 as $k1 => $v1){
-            $$k1 = $v1;
-		$v1 = $v1 + 1;
-        }
+    $res1 = $qry_year->fetch_assoc();
+    if(!empty($res1['main_vn'])){
+        $v1 = $res1['main_vn'] + 1; // database থেকে সর্বশেষ main voucher
+    } 
+}
+
+// Step 2: main voucher এর অধীনে সর্বশেষ sub voucher বের করা
+$qry_sub = $conn->query("
+    SELECT MAX(voucher_number) AS sub_vn
+    FROM journal_entries
+    WHERE year_id = '$val'
+    AND journal_type = '$journal_type'
+    AND FLOOR(voucher_number) = '$v1'
+");
+
+if($qry_sub->num_rows > 0){
+    $res2 = $qry_sub->fetch_assoc();
+    if(!empty($res2['sub_vn'])){
+        // previous sub voucher থেকে 0.1 increment
+        $voucher_number = number_format($res2['sub_vn'] + 0.1, 1);
+    } else {
+        // প্রথম sub voucher
+        $voucher_number = number_format($v1 + 0.1, 1);
     }
+} else {
+    $voucher_number = number_format($v1 + 0.1, 1);
+}
+
+// $voucher_number এখন auto-generated: 150.1, 150.2, 150.3 ...
+echo $voucher_number;
+
 
 
 $v_num = $conn->query("SELECT max(voucher_number) as vn FROM `journal_entries` where year_id = '$val' and journal_type = 'jv'");

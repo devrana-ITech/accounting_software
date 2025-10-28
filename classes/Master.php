@@ -599,7 +599,7 @@ Class Master extends DBConnection {
 		}
 	
 		$code1 = $prefix.$code1;	
-		$voucher_number = $voucher_number + 1;	
+		$voucher_number = $voucher_number + 0.1;	
 		
 		if (($flag_vat === 1) && ($flag_it === 1) && ($flag_sc === 1)) 
 			$sql_2 = "INSERT INTO `journal_entries`(`journal_type`, `new`, `debit_count`, `credit_count`, `journal_date`, `voucher_number`, `description`, `source_fund`, `dli_type`, `component_number`, `category_number`, `payee_name`, `gross_amt`, `vat_deduction`, `it_deduction`, `sc_deduction`, `security_deduction`, `chq_number`, `pkg_number`, `exp_type`, `exp_group`, `code`, `user_id`, `year_id`) VALUES ('dv', '0', '111', '1', '{$journal_date}', '{$voucher_number}', '{$description}', '{$source_fund}', '{$dli_type}','{$component_number}','{$category_number}','13','{$amt_vatitsc}','{$vat_deduction}','{$it_deduction}','{$sc_deduction}','{$security_deduction}','{$chq_number_tax}','{$pkg_number}','{$exp_type}', '{$exp_group}','{$code1}','{$user_id}', '{$year_id}' ) ";
