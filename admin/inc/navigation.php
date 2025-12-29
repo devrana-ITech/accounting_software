@@ -120,6 +120,36 @@
                         </p>
                       </a>
                     </li>
+                    <li class="nav-header">Procurement</li>
+
+                <li class="nav-item">
+                      <a href="<?php echo base_url ?>admin/?page=Procurement/Goods" class="nav-link text-light nav-iufr">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>
+                          Goods
+                        </p>
+                      </a>
+                    </li>
+
+                <li class="nav-item">
+                  <a href="<?php echo base_url ?>admin/?page=works" class="nav-link text-light nav-iufr">
+                    <i class="nav-icon fas fa-book"></i>
+                    <p>
+                      Works
+                    </p>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                      <a href="<?php echo base_url ?>admin/?page=services" class="nav-link text-light nav-iufr">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>
+                          Services
+                        </p>
+                      </a>
+                    </li>
+
+
                     <li class="nav-header">Reports</li>
 					
 					<li class="nav-item">

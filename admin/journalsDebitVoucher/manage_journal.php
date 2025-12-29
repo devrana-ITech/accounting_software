@@ -13,12 +13,21 @@ if(isset($_GET['id'])){
     }
 }
 
+// $val = $_settings->userdata('year_id');
+// $qry_year = $conn->query("SELECT max(voucher_number) as vn FROM `journal_entries` where year_id = '$val' and journal_type = 'dv'");
+// if($qry_year->num_rows > 0){
+//         $res1 = $qry_year->fetch_array();
+//         foreach($res1 as $k1 => $v1){
+//             $$k1 = $v1;
+// 		$v1 = $v1 + 1;
+//         }
+//     }
 
 
-$val = $_settings->userdata('year_id'); // বর্তমান বছর
+$val = $_settings->userdata('year_id'); 
 $journal_type = 'dv';
 
-// Step 1: সর্বশেষ main voucher number বের করা (integer অংশ)
+
 $qry_year = $conn->query("
     SELECT MAX(FLOOR(voucher_number)) AS main_vn
     FROM journal_entries
@@ -29,11 +38,11 @@ $qry_year = $conn->query("
 if($qry_year->num_rows > 0){
     $res1 = $qry_year->fetch_assoc();
     if(!empty($res1['main_vn'])){
-        $v1 = $res1['main_vn'] + 1; // database থেকে সর্বশেষ main voucher
+        $v1 = $res1['main_vn'] + 1; 
     } 
 }
 
-// Step 2: main voucher এর অধীনে সর্বশেষ sub voucher বের করা
+
 $qry_sub = $conn->query("
     SELECT MAX(voucher_number) AS sub_vn
     FROM journal_entries
@@ -45,18 +54,18 @@ $qry_sub = $conn->query("
 if($qry_sub->num_rows > 0){
     $res2 = $qry_sub->fetch_assoc();
     if(!empty($res2['sub_vn'])){
-        // previous sub voucher থেকে 0.1 increment
+ 
         $voucher_number = number_format($res2['sub_vn'] + 0.1, 1);
     } else {
-        // প্রথম sub voucher
+
         $voucher_number = number_format($v1 + 0.1, 1);
     }
 } else {
     $voucher_number = number_format($v1 + 0.1, 1);
 }
 
-// $voucher_number এখন auto-generated: 150.1, 150.2, 150.3 ...
-echo $voucher_number;
+
+
 
 
 
@@ -213,6 +222,9 @@ tr
             </div>
 			<div class="col-md-2 form-group">
                 SD Deduction<input style="background-color: #f0dcf7;" type="number" id="security_deduction" name="security_deduction" class="form-control form-control-sm rounded-0" value="<?= isset($security_deduction) ? $security_deduction : "0" ?>" onkeyup="net_pay()" required>
+            </div>
+			<div class="col-md-2 form-group">
+                Commission<input style="background-color: #f0dcf7;" type="number" id="commission" name="commission" class="form-control form-control-sm rounded-0" value="<?= isset($commission) ? $commission : "0" ?>" onkeyup="net_pay()" required>
             </div>
 			<div class="col-md-1 form-group">
                 Advice No.<input style="background-color: #f0dcf7;" type="text" id="chq_number" name="chq_number" class="form-control form-control-sm rounded-0" value="<?= isset($chq_number) ? $chq_number : "" ?>" required>
@@ -401,7 +413,8 @@ updateDliType();
 		var it_deduction = $('#it_deduction').val();
 		var sc_deduction = $('#sc_deduction').val();
 		var security_deduction = $('#security_deduction').val();
-		netpay.value = gross_amt - vat_deduction - it_deduction - sc_deduction - security_deduction;
+		var commission = $('#commission').val();
+		netpay.value = gross_amt - vat_deduction - it_deduction - sc_deduction - security_deduction - commission;
 		n2.value = netpay.value;
 	}
 	/*

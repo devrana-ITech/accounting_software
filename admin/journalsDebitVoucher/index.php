@@ -118,6 +118,7 @@ function format_num($number){
 						  $it = "";
 						  $sc = "";
 						  $security = "";
+						  $commission = "";
 						  
 						  
 						  if ((!empty($row['vat_deduction'])) && ($row['vat_deduction'] != 0)){
@@ -132,9 +133,12 @@ function format_num($number){
 						  if ((!empty($row['security_deduction'])) && ($row['security_deduction'] != 0)){
 							  $security = "Security: " .format_num($row['security_deduction']);
 						  }
+						  if ((!empty($row['commission'])) && ($row['commission'] != 0)){
+							  $commission = "commission: " .format_num($row['commission']);
+						  }
 						?>
 						
-						<td class="text-center">Gross Amt: <?= format_num($row['gross_amt']) ?><br><?= $vat ?><?= $it ?><?= $sc ?><?= $security ?></td>
+						<td class="text-center">Gross Amt: <?= format_num($row['gross_amt']) ?><br><?= $vat ?><?= $it ?><?= $sc ?><?= $security ?><br><?= $commission ?></td>
 						
 						<td class="p-0">
 							

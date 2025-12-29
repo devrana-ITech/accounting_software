@@ -31,6 +31,13 @@ switch ($action) {
 		$_settings->set_userdata('year_id','5');
 		redirect('admin');
 		break; 
+	case '6':
+		$_settings->set_userdata('fy','2025-2026');
+		$_settings->set_userdata('from_date','2025-07-01');
+		$_settings->set_userdata('to_date','2026-06-30');
+		$_settings->set_userdata('year_id','6');
+		redirect('admin');
+		break; 
 	default:
 		break;
 }
