@@ -363,7 +363,80 @@ Class Master extends DBConnection {
 		}
 		return json_encode($resp);
 	}
+
+
 	
+	function save_goods(){
+    extract($_POST);
+    $data = "";
+
+    foreach($_POST as $k => $v){
+        // if($k != 'id'){
+        //     $v = $this->conn->real_escape_string($v);
+        //     if(!empty($data)) $data .= ",";
+        //     $data .= "`{$k}` = '{$v}'";
+        // }
+
+		if(!in_array($k, array('id')) && !is_numeric($k)){
+			if(empty($data)){
+				$data .="$k = '$v'";
+			}else{
+				$data .= ", $k = '$v'";
+			}
+		}
+    }
+
+    if(empty($id)){
+        $sql = "INSERT INTO `goods` SET {$data}";
+    }else{
+        $sql = "UPDATE `goods` SET {$data} WHERE id = '{$id}'";
+    }
+
+    $save = $this->conn->query($sql);
+    if($save){
+        return 1;
+    }
+    return 0;
+}
+
+
+	// function delete_goods(){
+	// 	extract($_POST);
+	// 	$id = isset($_POST['id']);
+	// 	$delete = $this->conn->query("DELETE FROM `goods` where id =" .$id);
+	// 	if($delete){
+	// 		return 1;
+	// 	}
+	// 	return 0;
+	// }
+
+// 	function delete_goodss(){
+//     if(!isset($_POST['id'])) return 0;
+
+//     $stmt = $this->conn->prepare("DELETE FROM goods WHERE id = ?");
+//     $stmt->bind_param("i", $_POST['id']);
+//     $stmt->execute();
+
+//     if($stmt->affected_rows > 0){
+//         return 1;
+//     }
+//     return 0;
+// }
+
+	function delete_goods(){
+    if(!isset($_POST['id'])) return 0;
+
+    $id = $this->conn->real_escape_string($_POST['id']);
+
+    $delete = $this->conn->query("DELETE FROM `goods` WHERE id = '{$id}'");
+
+    if($delete){
+        return 1;
+    }
+    return 0;
+}
+
+
 	
 	function delete_account(){
 		extract($_POST);
@@ -1012,6 +1085,12 @@ switch ($action) {
 	break;
 	case 'cancel_journal':
 		echo $Master->cancel_journal();
+	break;
+	 case 'save_goods':
+        echo $Master->save_goods();
+	break;
+	case 'delete_goods':
+		echo $Master->delete_goods();
 	break;
 	default:
 		// echo $sysset->index();
