@@ -122,7 +122,6 @@ $(document).ready(function(){
             method: 'POST',
             success: function(res){
                 if(res == 1){
-                    alert("Saved Successfully");
                     location.reload();
                 }else{
                     alert("Failed to save");

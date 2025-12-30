@@ -152,7 +152,6 @@ function format_num($number){
 			data:{id: $id},
 			success:function(resp){
 				 if(resp == 1){
-                    alert("Data Delete Successfully");
                     location.reload();
                 }else{
                     alert("Failed to save");
