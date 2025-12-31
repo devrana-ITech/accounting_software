@@ -400,7 +400,7 @@ Class Master extends DBConnection {
 }
 
 
-	// function delete_goods(){
+	// function delete_goodsss(){
 	// 	extract($_POST);
 	// 	$id = isset($_POST['id']);
 	// 	$delete = $this->conn->query("DELETE FROM `goods` where id =" .$id);

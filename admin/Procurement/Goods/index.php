@@ -1,11 +1,4 @@
-<?php
-function format_num($number){
-	$decimals = 0;
-	$num_ex = explode('.',$number);
-	$decimals = isset($num_ex[1]) ? strlen($num_ex[1]) : 2 ;
-	return number_format($number,$decimals);
-}
-?>
+
 <style>
 	th.p-0, td.p-0{
 		padding: 0 !important;
@@ -80,10 +73,17 @@ function format_num($number){
 					<tr class="bg-gradient-primary text-light">
 						<th>#</th>
 						<th>Package No.</th>
-						<th>Description of Package</th>
+						<th>Package Descrip</th>
 						<th>Unit</th>
 						<th>Quantity</th>
-						<th>Procurement Method</th>
+						<th>Procurement Type</th>
+						<th>Tender App.</th>
+						<th>Source</th>
+						<th>Cost</th>
+						<th>Invitation</th>
+						<th>Signing</th>
+						<th>Completion</th>
+						<th>Procurement Status</th>
 						<th>Action</th>
 					</tr>
 				</thead>
@@ -100,6 +100,13 @@ function format_num($number){
 							<td class=""><?php echo $row['unit'] ?></td>
 							<td class=""><?php echo $row['quantity'] ?></td>
 							<td class=""><?php echo $row['procuement_type'] ?></td>
+							<td class=""><?php echo $row['tender_approval'] ?></td>
+							<td class=""><?php echo $row['source_funds'] ?></td>
+							<td class=""><?php echo $row['cost_lac'] ?></td>
+							<td class=""><?php echo $row['invitation_tender'] ?></td>
+							<td class=""><?php echo $row['signing_contract'] ?></td>
+							<td class=""><?php echo $row['conpletion_contract'] ?></td>
+							<td class=""><?php echo $row['procurement_status'] ?></td>
 							
 							
 							<td align="center">
